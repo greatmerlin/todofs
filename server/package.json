@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/greatmerlin/todofs/issues"
   },
-  "homepage": "https://github.com/greatmerlin/todofs#readme"
+  "homepage": "https://github.com/greatmerlin/todofs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  }
 }
