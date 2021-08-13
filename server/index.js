@@ -56,6 +56,17 @@ app.get("/todos/:id", async (request, response) => {
 
 // update a todo
 
+app.put("/todos/:id", async(request, response) => {
+  try {
+    const { id } = request.params; // which todo
+    const { description } = request.body; // give me its body
+    const updateTodo = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2", [description, id]);
+    response.json("todo was updated");
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 // delete a todo
 
 app.listen(5000, () => {
